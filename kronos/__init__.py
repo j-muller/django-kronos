@@ -4,6 +4,7 @@ from functools import wraps
 
 from kronos.utils import read_crontab, write_crontab, delete_crontab
 from kronos.settings import PROJECT_MODULE, KRONOS_PYTHON, KRONOS_MANAGE, KRONOS_PYTHONPATH, KRONOS_POSTFIX
+from kronos.models import Task
 
 from django.utils.importlib import import_module
 from django.conf import settings

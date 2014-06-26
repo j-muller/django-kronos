@@ -11,6 +11,8 @@ class Command(BaseCommand):
 
         for task in kronos.tasks:
             if task.__name__ == task_name:
+                kronos.Task.objects.create(name=task_name)
+
                 return task()
 
         raise CommandError('Task \'%s\' not found' % task_name)
